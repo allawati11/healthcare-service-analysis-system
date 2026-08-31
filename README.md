@@ -1,2 +1,15 @@
-# healthcare-service-analysis-system
-An algorithmic platform designed to process hospital operational metrics—including patient visit counts, treatment demand, facility utilization, and emergency surges. The system calculates cumulative risk scores to categorize operational demand into High, Medium, or Low levels to support healthcare resource allocation.
+Initialize demandScore = 0
+Input patientVisits, treatmentDemand, facilityUtilization, emergencySurge
+For each parameter in (patientVisits, treatmentDemand, facilityUtilization, emergencySurge)
+    If parameter > threshold
+        Increment demandScore by 1
+    Else
+        Do nothing
+End For
+If demandScore >= 3
+    Display "High Demand"
+Else If demandScore == 2
+    Display "Medium Demand"
+Else
+    Display "Low Demand"
+End If
